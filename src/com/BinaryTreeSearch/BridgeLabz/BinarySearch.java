@@ -3,7 +3,7 @@ package com.BinaryTreeSearch.BridgeLabz;
 public class BinarySearch
 {
 	/*
-	 * UC1- Create and Print the Binary Tree
+	 * UC2- Check if all are added with using size Method in Binary Tree
 	 */
 	
 	public Node createNewNode(int k) 
@@ -53,10 +53,24 @@ public class BinarySearch
 		root = binaryTree.insertNode(root, 56);
 		root = binaryTree.insertNode(root, 30);
 		root = binaryTree.insertNode(root, 70);
-		
+		root = binaryTree.insertNode(root, 22);
+		root = binaryTree.insertNode(root, 40);
+		root = binaryTree.insertNode(root, 60);
+		root = binaryTree.insertNode(root, 95);
+		root = binaryTree.insertNode(root, 11);
+		root = binaryTree.insertNode(root, 65);
+		root = binaryTree.insertNode(root, 03);
+		root = binaryTree.insertNode(root, 16);
+		root = binaryTree.insertNode(root, 63);
+		root = binaryTree.insertNode(root, 67);
 
 		
 		binaryTree.displayTree(root);
+		
+		Node size = new Node();
+		int result = size.size(root);
+		
+		System.out.println("\n Size of Binary Tree :" +result);
 	}
 }
 
