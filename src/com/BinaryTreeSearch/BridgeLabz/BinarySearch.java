@@ -3,7 +3,8 @@ package com.BinaryTreeSearch.BridgeLabz;
 public class BinarySearch
 {
 	/*
-	 * UC2- Check if all are added with using size Method in Binary Tree
+	 * UC3- Search 63 in the Binary Tree
+	 * Implement Search method
 	 */
 	
 	public Node createNewNode(int k) 
@@ -42,6 +43,29 @@ public class BinarySearch
 	}
 	
 	
+	//Search 
+	
+	public Node search(Node node, int key) {
+		
+		
+		if (node == null || node.data == key) 
+		{
+			System.out.println("\n"+node.data + "- Node is Present in the Tree");
+			return node;
+		} else {
+			
+			if (node.data < key)
+			{
+				return search(node.right, key);
+			} 
+			else 
+			{
+				return search(node.left, key);
+			}
+		}
+	}
+	
+	
 	public static void main(String a[])
 	{
 		
@@ -66,6 +90,7 @@ public class BinarySearch
 
 		
 		binaryTree.displayTree(root);
+		binaryTree.search(root, 63);
 		
 		Node size = new Node();
 		int result = size.size(root);
